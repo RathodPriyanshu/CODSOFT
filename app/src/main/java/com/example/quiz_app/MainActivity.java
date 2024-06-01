@@ -1,6 +1,7 @@
 package com.example.quiz_app;
 import android.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -79,11 +80,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
     @Override
     public void onClick(View view){
-
-        ansA.setBackgroundColor(android.R.color.white);
-        ansB.setBackgroundColor(android.R.color.white);
-        ansC.setBackgroundColor(android.R.color.white);
-        ansD.setBackgroundColor(android.R.color.white);
+        ansA.setBackgroundColor(Color.WHITE);
+        ansB.setBackgroundColor(Color.WHITE);
+        ansC.setBackgroundColor(Color.WHITE);
+        ansD.setBackgroundColor(Color.WHITE);
 
         Button clickedButton = (Button) view;
 
@@ -93,7 +93,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     score++;
                 }
                 else{
-                    clickedButton.setBackgroundColor(android.R.color.black);
+                    clickedButton.setBackgroundColor(Color.MAGENTA);
                 }
                 currentQuestionIndex++;
                 loadNewQuestion();
@@ -101,7 +101,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         else{
             selectedAnswer=clickedButton.getText().toString();
-            clickedButton.setBackgroundColor(android.R.color.black);
+            clickedButton.setBackgroundColor(Color.YELLOW);
         }
     }
 }
